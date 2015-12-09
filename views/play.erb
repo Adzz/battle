@@ -1,2 +1,14 @@
 
-<%= @player_1_name  %> vs. <%= @player_2_name %>
+
+
+<div><%= @player_1_name %> vs. <%= @player_2_name %></div>
+<br>
+<div><p>Health: </p><%= @player_1_health %> <p>Health: </p><%= @player_2_health %></div>
+
+<!-- <form action="/attacked" method="post">
+<input type="submit" name="Attack!">
+</form> -->
+
+<% if @attacked %>
+<h1>Player 2 attacked!</h1>
+<% end %>
