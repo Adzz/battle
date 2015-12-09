@@ -15,4 +15,9 @@ describe Player do
     end
   end
 
+  describe "#receieve_damage" do
+    it "Reduces HP" do
+      expect{player.receive_damage}.to change{player.hit_points}.by(-Player::ATTACK_POINTS)
+    end
+  end
 end

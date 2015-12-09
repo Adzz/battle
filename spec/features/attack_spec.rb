@@ -9,4 +9,11 @@ feature 'Attack player 2 and confirm attack' do
     expect(page).to have_content "Michael was attacked!"
   end
 
+  scenario "Attacks player 2" do
+    sign_in_and_play
+    click_link("Attack!")
+    click_link("Return to Arena")
+    expect(page).to have_content "Health: 90"
+  end
+
 end

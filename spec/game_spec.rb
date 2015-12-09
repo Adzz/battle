@@ -2,13 +2,17 @@ require 'game'
 require 'player'
 
 describe Game do
-  subject(:game) { described_class.new }
-  let(:player) { Player.new(:Jeff) }
+  subject(:game) { described_class.new(player_1, player_2) }
+  let(:player_1) { double :player }
+  let(:player_2) { double :player }
 
-  describe "#attack" do
-    it "Reduces HP when attacked" do
-      expect{game.attack(player)}.to change{player.hit_points}.by(-Player::ATTACK_POINTS)
-    end
+  it "retrieves the first player" do
+    expect(game.player_1).to eq player_1
   end
+
+  it "gets the second player" do
+    expect(game.player_2).to eq player_2
+  end
+
 
 end

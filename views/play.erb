@@ -1,9 +1,9 @@
 
 
 
-<div><%= @player_1_name %> vs. <%= @player_2_name %></div>
+<div><%= $game.player_1.name %> vs. <%= $game.player_2.name %></div>
 <br>
-<div><p>Health: </p><%= @player_1_health %> <p>Health: </p><%= @player_2_health %></div>
+<div><p>Health: </p><%= $game.player_1.hit_points %> <p>Health: </p><%= $game.player_2.hit_points %></div>
 
 <br>
 <a href="/attacked">Attack!</a>
