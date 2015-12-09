@@ -5,8 +5,8 @@
 feature 'Attack player 2 and confirm attack' do
   scenario "Attacks player 2, and confirm" do
     sign_in_and_play
-    click_button("Attack!")
-    expect(page).to have_content "Player 2 attacked!"
+    click_link("Attack!")
+    expect(page).to have_content "Michael attacked!"
   end
 
 end
