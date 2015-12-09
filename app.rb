@@ -25,7 +25,6 @@ class Battle < Sinatra::Base
   end
 
   get '/attacked' do
-    @player_2_name = $player_2_name.name
     $player_2_name.attack
     erb :attacked
   end
