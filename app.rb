@@ -23,9 +23,9 @@ class Battle < Sinatra::Base
     erb :play
   end
 
-  post '/attacked' do
-    @attacked = true
-    @attacked = false
+  get '/attacked' do
+    @player_2_name = session[:player_2_name]
+    erb :attacked
   end
 
 
