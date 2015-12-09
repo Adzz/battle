@@ -12,8 +12,7 @@ feature 'Attack player 2 and confirm attack' do
   scenario "Attacks player 2" do
     sign_in_and_play
     click_link("Attack!")
-    click_link("Return to Arena")
+    click_link("TAKE REVENGE!")
     expect(page).to have_content "Health: 90"
   end
-
 end

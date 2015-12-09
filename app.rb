@@ -4,9 +4,6 @@ require './lib/game'
 
 class Battle < Sinatra::Base
 
-    enable :sessions
-
-
   get '/' do
       erb :index
     end
@@ -23,11 +20,20 @@ class Battle < Sinatra::Base
   end
 
   get '/attacked' do
-    player_2 = $game.player_2
-    $game.attack(player_2)
     erb :attacked
   end
 
+  get '/play2' do
+    player_2 = $game.player_2
+    $game.attack(player_2)
+    erb :play2
+  end
+
+  get '/attacked2' do
+    player_1 = $game.player_1
+    $game.attack(player_1)
+    erb :attacked2
+  end
 
   # start the server if ruby file executed directly
   run! if app_file == $0

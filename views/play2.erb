@@ -1,15 +1,13 @@
 
-
-
 <div>
   <h1><%= $game.player_1.name %> vs. <%= $game.player_2.name %></h1>
 </div>
 <br>
 <div>
+  <h4><%= $game.player_1.name %>'s Health: <%= $game.player_2.hit_points %></h4>
   <h4><%= $game.player_1.name %>'s Health: <%= $game.player_1.hit_points %></h4>
-  <h4><%= $game.player_2.name %>'s Health: <%= $game.player_2.hit_points %></h4>
 </div>
 <br>
-<a href="/attacked">
-  <h3>Attack!</h3>
+<a href="/attacked2">
+  <h3>Take him out!</h3>
 </a>
